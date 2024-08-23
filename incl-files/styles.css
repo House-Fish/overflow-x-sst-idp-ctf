@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align:center
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #444444;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 3rem;
+}
+
+button {
+    background-color: #f0f0f0;
+    color: #333333;
+    border: 1px solid #cccccc;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* flag2/2: _1NCLUD3D_F1L35} */

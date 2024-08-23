@@ -26,6 +26,7 @@ services:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./incl-files:/usr/share/nginx/html/incl-files
     depends_on:
       - cookies
       - intercept
