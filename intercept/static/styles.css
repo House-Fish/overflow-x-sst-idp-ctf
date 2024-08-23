@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align:center
+}
+
+body {
+    background-color: #f0ca8e;
+    color: #333333;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #444444;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 3rem;
+}
