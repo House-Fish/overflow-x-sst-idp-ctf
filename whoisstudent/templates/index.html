@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Lookup</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            border: 2px solid #888;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #004466;
+            text-shadow: 1px 1px 2px #ccc;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border: 1px solid #777;
+            box-shadow: 2px 2px 5px #999;
+            display: inline-block;
+            text-align: left;
+            width: 300px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 5px;
+            border: 1px solid #555;
+            margin-bottom: 15px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button {
+            background-color: #004466;
+            color: white;
+            padding: 5px 20px;
+            border: 1px solid #003344;
+            box-shadow: 1px 1px 3px #777;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #003344;
+        }
+    </style>
+    <script>
+        function submitXML() {
+            const name = document.getElementById("name").value;
+
+            const xmlData = `<?xml version="1.0" encoding="UTF-8"?><lookup><name>${name}</name></lookup>`;
+
+            // Create a new XMLHttpRequest object
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "/lookup", true);
+            xhr.setRequestHeader("Content-Type", "application/xml");
+            
+            // Handle the response
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.body.innerHTML = xhr.responseText;
+                }
+            };
+            
+            // Send the XML
+            xhr.send(xmlData);
+        }
+    </script>
+</head>
+<body>
+    <h1>Dover Secondary School - Student Lookup</h1>
+    <form onsubmit="event.preventDefault(); submitXML();">
+        <label for="name">Enter Student Name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Lookup</button>
+    </form>
+</body>
+</html>

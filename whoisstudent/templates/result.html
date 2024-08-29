@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lookup Result</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            border: 2px solid #888;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #004466;
+            text-shadow: 1px 1px 2px #ccc;
+            margin-bottom: 20px;
+        }
+
+        .result-container {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border: 1px solid #777;
+            box-shadow: 2px 2px 5px #999;
+            display: inline-block;
+            text-align: left;
+            width: 300px;
+            margin: auto;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 8px 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .redacted {
+            color: #b00;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #004466;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lookup Result</h1>
+    <div class="result-container">
+        {% if student %}
+            <p><strong>Name:</strong> {{ student.name }}</p>
+            <p><strong>Phone:</strong> {{ student.phone }}</p>
+            <p><strong>Email:</strong> <span class="redacted">{{ student.email }}</span></p>
+            <p><strong>Address:</strong> <span class="redacted">{{ student.address }}</span></p>
+            <p><strong>Grades:</strong> <span class="redacted">{{ student.grades }}</span></p>
+        {% else %}
+            <p>Student not found.</p>
+        {% endif %}
+    </div>
+    <a href="/">Back to Search</a>
+</body>
+</html>
