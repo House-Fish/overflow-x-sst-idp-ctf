@@ -2,7 +2,7 @@ FROM python:3.12.4-alpine
 
 WORKDIR /whoisstudent
 
-COPY . /whoisstudent/
+COPY . /whoisstudent
 
 RUN pip install --no-cache-dir -r requirements.txt
 
