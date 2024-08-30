@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Brother's Web</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: "Courier New", Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0.5em;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 0.5em;
+        }
+        .hint {
+            font-style: italic;
+            color: #00FF00;
+        }
+        .eye {
+            font-size: 5em;
+            margin-bottom: 0.5em;
+        }
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { color: transparent }
+            50% { color: #00FF00 }
+        }
+    </style>
+</head>
+<body>
+    <div class="eye">👁️</div>
+    <h1>Big Brother is Watching You</h1>
+    <p class="hint">Curiosity is not a crime... but secrets are hidden where prying eyes don't usually look.</p>
+    <p class="blink">_</p>
+</body>
+</html>

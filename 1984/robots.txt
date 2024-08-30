@@ -1,0 +1,33 @@
+# robots.txt
+# User-agent directives control which parts of the site can be crawled by search engines
+User-agent: *
+
+# Disallowed files
+Allow: /Cipher.html
+Allow: /Dystopia.html
+Disallow: /Enigma.html
+Disallow: /Ephemeral.html
+Disallow: /evil.html
+Disallow: /haha.html
+Disallow: /imdaone.html
+Disallow: /index.html
+Allow: /itsmeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.html
+Disallow: /jefferydaddy.html
+Disallow: /jk.html
+Disallow: /Labyrinth.html
+Allow: /Nebula.html
+Disallow: /Nexus.html
+Disallow: /nice.html
+Disallow: /notme.html
+Disallow: /nowayman.html
+Disallow: /Obfuscate.html
+Disallow: /ohno.html
+Disallow: /oopsie.html
+Disallow: /orwell.html
+Disallow: /Paradox.html
+Allow: /Reverie.html
+Disallow: /sussybaka.html
+Disallow: /thatstheone.html
+Disallow: /whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.html
+
+# Keep looking, the secret is hidden in plain sight.

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            border: 2px solid #888;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            color: #004466;
+            text-shadow: 1px 1px 2px #ccc;
+            margin-bottom: 20px;
+            font-size: 48px;
+        }
+        p {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border: 1px solid #777;
+            box-shadow: 2px 2px 5px #999;
+            display: inline-block;
+            text-align: left;
+            font-size: 18px;
+            margin: auto;
+            width: 70%;
+        }
+        a {
+            color: #004466;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <p>
+        {{ error_message }}<br><br>
+        Please return to the <a href="/">home page</a> and try your request again.
+    </p>
+</body>
+</html>
