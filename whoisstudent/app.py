@@ -49,16 +49,15 @@ def lookup():
         tree = etree.fromstring(request.data, parser)
         name = tree.findtext('name').lower()
     except Exception as e:
-        print(e)
+        # print(e)
         pass
 
     student = find_student(name)
     
     if student is None: 
-        return render_template('404.html', error_message=f'{name} not found in database. Please check the name and try again.')
+        return render_template('404.html', error_message=f'{name} not found in database. Please check the name and try again.'), 404
 
     redacted_student = redact_info(student)
-
     return render_template('result.html', student=redacted_student)
 
 if __name__ == '__main__':
